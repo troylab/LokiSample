@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.810.9
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LokiSample", "LokiSample\LokiSample.csproj", "{E8A93D8F-D97F-4330-A07C-0E6E9B3E446D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FB9E6DDA-1E7D-4044-94D8-1A43BFDFF8A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "src\API\API.csproj", "{9EC88B01-6B1A-45DE-9DE4-7FC9CE13954B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{446FF39C-D76F-4FB5-A2D2-4F99C514E461}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yaml = docker-compose.yaml
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +19,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E8A93D8F-D97F-4330-A07C-0E6E9B3E446D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E8A93D8F-D97F-4330-A07C-0E6E9B3E446D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E8A93D8F-D97F-4330-A07C-0E6E9B3E446D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E8A93D8F-D97F-4330-A07C-0E6E9B3E446D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EC88B01-6B1A-45DE-9DE4-7FC9CE13954B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EC88B01-6B1A-45DE-9DE4-7FC9CE13954B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EC88B01-6B1A-45DE-9DE4-7FC9CE13954B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EC88B01-6B1A-45DE-9DE4-7FC9CE13954B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {90AF8E8B-9A67-48EE-B266-15E21CC14E3A}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9EC88B01-6B1A-45DE-9DE4-7FC9CE13954B} = {FB9E6DDA-1E7D-4044-94D8-1A43BFDFF8A8}
 	EndGlobalSection
 EndGlobal

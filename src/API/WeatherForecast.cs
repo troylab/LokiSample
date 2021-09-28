@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LokiSample
+namespace API
 {
     public class WeatherForecast
     {

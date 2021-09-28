@@ -4,8 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Serilog;
 
-namespace LokiSample.Controllers
+namespace API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -27,6 +28,14 @@ namespace LokiSample.Controllers
         public IEnumerable<WeatherForecast> Get()
         {
             var rng = new Random();
+
+            _logger.LogInformation("The god of the day is {@God}", "Sor");
+            _logger.LogError("我錯了, 錯誤代碼: {@error_id}", rng.Next(1,100));
+
+            Log.Logger.Warning("Hello {@username}", "Troy");
+
+            Log.Logger.Information("訂單成立, {@Order}", new Order { OrderId = Guid.NewGuid().ToString("N"), OrderItem = Faker.Name.First() });
+
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
@@ -35,5 +44,11 @@ namespace LokiSample.Controllers
             })
             .ToArray();
         }
+    }
+
+    public class Order
+    {
+        public string OrderId { get; set; }
+        public string OrderItem { get; set; }
     }
 }
