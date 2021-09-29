@@ -407,8 +407,11 @@ ASALocalRun/
 # loki
 loki/data/
 
-# loki
+# grafana
 grafana/data/
 
-# logs
+# API dist
+src/API/dist
+
+# API logs
 src/API/Logs/

@@ -4,6 +4,11 @@ networks:
   loki:
 
 services:
+  api:
+    build: ./src/API
+    ports:
+      - "5000:80"
+
   loki:
     image: grafana/loki:2.3.0
     ports:
@@ -22,7 +27,7 @@ services:
       - ./grafana/provisioning:/etc/grafana/provisioning
       - ./grafana/dashboard_definitions:/var/lib/grafana/dashboards
     environment:
-      - GF_SECURITY_ADMIN_PASSWORD=Aa123456
+      - GF_SECURITY_ADMIN_PASSWORD=password
       - GF_USERS_ALLOW_SIGN_UP=false
     ports:
       - "3000:3000"

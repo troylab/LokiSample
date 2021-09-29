@@ -32,7 +32,7 @@ namespace API.Controllers
             _logger.LogInformation("The god of the day is {@God}", Faker.Name.Last());
             _logger.LogError("我錯了, 錯誤代碼: {@error_id}", rng.Next(1,100));
 
-            Log.Logger.Warning("Hello {@username}", "Troy");
+            Log.Logger.Warning("Hello {@username}", Faker.Name.FullName());
 
             Log.Logger.Information("訂單成立, {@Order}", new Order { OrderId = Guid.NewGuid().ToString("N"), OrderItem = Faker.Name.First() });
 
