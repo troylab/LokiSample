@@ -29,7 +29,7 @@ namespace API.Controllers
         {
             var rng = new Random();
 
-            _logger.LogInformation("The god of the day is {@God}", "Sor");
+            _logger.LogInformation("The god of the day is {@God}", Faker.Name.Last());
             _logger.LogError("我錯了, 錯誤代碼: {@error_id}", rng.Next(1,100));
 
             Log.Logger.Warning("Hello {@username}", "Troy");
