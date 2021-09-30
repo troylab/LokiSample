@@ -415,3 +415,4 @@ src/API/dist
 
 # API logs
 src/API/Logs/
+logcli
