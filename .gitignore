@@ -405,7 +405,7 @@ ASALocalRun/
 .localhistory/
 
 # loki
-loki/data/
+loki/data*/
 
 # grafana
 grafana/data/

@@ -36,6 +36,8 @@ namespace API.Controllers
 
             Log.Logger.Information("訂單成立, {@Order}", new Order { OrderId = Guid.NewGuid().ToString("N"), OrderItem = Faker.Name.First() });
 
+            Log.Logger.Information(Faker.Lorem.Paragraph());
+
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
